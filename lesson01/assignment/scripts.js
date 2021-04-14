@@ -92,8 +92,8 @@ document. addEventListener("DOMContentLoaded", function(){
       //1 ostrich egg can feed 22 people
       const eggCount = totalGuest/22;
 
-      //Updates the html page and rounds out the number
-      document.querySelector('#form-2 .output').innerHTML = parseFloat(eggCount);
+      //Updates the html page
+      document.querySelector('#form-2 .output').innerHTML = eggCount;
     };
 
     //CLears the input field
@@ -101,33 +101,35 @@ document. addEventListener("DOMContentLoaded", function(){
 
   })
 
+
+  //Find form-3 and handle the event
   const formThree = document.querySelector('#form-3');
 
-  //Select fruit
-
-
   formThree.addEventListener('submit', function(event){
-
-    const favFruit = ['strawberry', 'blueberry', 'cherry']
     event.preventDefault();
 
-    const userInput = document.querySelector('#form-3 .input').value;
+    //Favorite fruits
+    let favFruit = ['strawberry', 'blueberry', 'raspberry']
 
+    //Capture and add user input to array
+    const userInput = document.querySelector('#form-3 .input').value;
     favFruit.push(userInput);
 
-    function berryCheck(currentFruit){
-      //Maybe you can turn this for a long string checker if you cant get the berries to work
-      // if(currentFruit.includes('berry')){
-      //   console.log('yass');
-      //   console.log(favFruit);
-      // }
-      return currentFruit.includes('berry');
-      console.log('I ran?');
-
-
+    //Check for the correct fruit
+    function berryCheck(berry) {
+      if(berry.includes('erry')){
+        console.log('does have berry in the name :' + berry);
+        document.querySelector('#form-3 .output').innerHTML = 'Yes! I love this fruit: ' + berry;
+      } else {
+        document.querySelector('#form-3 .output').innerHTML = 'Not my favorite, but still yummy!: ' + berry;
+      }
     }
 
+    // Users filter to run berryCheck function
     favFruit.filter(berryCheck);
+
+    // Clears input field
+    document.querySelector('#form-3 .input').value = '';
 
   });
 
