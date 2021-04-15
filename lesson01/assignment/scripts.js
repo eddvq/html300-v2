@@ -61,8 +61,8 @@ document. addEventListener("DOMContentLoaded", function(){
         //Form cleared
         inputField.value = '';
       }
-    })
-  })
+    });
+  });
 
   //Find form-2 and handle the event
   const formTwo = document.querySelector('#form-2');
@@ -94,12 +94,12 @@ document. addEventListener("DOMContentLoaded", function(){
 
       //Updates the html page
       document.querySelector('#form-2 .output').innerHTML = eggCount;
-    };
+    }
 
     //CLears the input field
     document.querySelector('#form-2 .input').value = '';
 
-  })
+  });
 
 
   //Find form-3 and handle the event
@@ -109,7 +109,7 @@ document. addEventListener("DOMContentLoaded", function(){
     event.preventDefault();
 
     //Favorite fruits
-    let favFruit = ['strawberry', 'blueberry', 'raspberry']
+    let favFruit = ['strawberry', 'blueberry', 'raspberry'];
 
     //Capture and add user input to array
     const userInput = document.querySelector('#form-3 .input').value;
@@ -133,10 +133,32 @@ document. addEventListener("DOMContentLoaded", function(){
 
   });
 
+  //find form-4 and handle the event
+  const formFour = document.querySelector('#form-4');
 
+  formFour.addEventListener('submit', function(event){
+      event.preventDefault();
 
+      //Empty array that will hold user input
+      let nameBank = [];
+      const myName = "eddy";
 
+      //Grabs and pushes user input in array
+      const userInput = document.querySelector('#form-4 .input').value;
+      nameBank.push(userInput);
 
+      //Arrow function that checks for string length
+      const count = nameBank.every( name => name.length > myName.length);
 
+      // If statement that determines the output
+      if (count){
+        document.querySelector('#form-4 .output').innerHTML = ' Your name is has more!';
+      } else {
+        document.querySelector('#form-4 .output').innerHTML = ' Your does not have more!';
+      }
+
+      document.querySelector('#form-4 .input').value = '';
+
+  })
 
 })
