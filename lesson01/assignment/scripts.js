@@ -101,7 +101,6 @@ document. addEventListener("DOMContentLoaded", function(){
 
   });
 
-
   //Find form-3 and handle the event
   const formThree = document.querySelector('#form-3');
 
@@ -147,7 +146,7 @@ document. addEventListener("DOMContentLoaded", function(){
       const userInput = document.querySelector('#form-4 .input').value;
       nameBank.push(userInput);
 
-      //Arrow function that checks for string length
+      //Arrow function that checks for string length and evealuates to a boolean
       const count = nameBank.every( name => name.length > myName.length);
 
       // If statement that determines the output
@@ -157,6 +156,7 @@ document. addEventListener("DOMContentLoaded", function(){
         document.querySelector('#form-4 .output').innerHTML = ' Your does not have more!';
       }
 
+      //Clears the input field
       document.querySelector('#form-4 .input').value = '';
 
   })
