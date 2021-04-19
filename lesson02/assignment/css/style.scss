@@ -4,3 +4,91 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+* {
+  box-sizing: border-box;
+}
+
+.main {
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+.card-container {
+  border: 5px solid #d1d1d1;
+  margin: 16px;
+  padding: 16px;
+  text-align: center;
+}
+
+.profile-base {
+  margin-bottom: 15px;
+}
+
+.profile-base img {
+  display: block;
+  border-radius: 100%;
+  width: 75%;
+  max-width: 350px;
+  margin: 30px auto;
+}
+
+.profile-base h2 {
+  color: #4d4f52;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+.profile-base p {
+  color: #4d4f52;
+  margin-top: 15px;
+  font-size: 1.25em;
+  font-style: italic;
+}
+
+.profile-deets {
+  margin: 16px;
+  text-align: left;
+  background-color: #e8e8e8;
+  display: inline-block;
+  margin: auto;
+  padding: 30px;
+}
+
+.profile-deets h3, p {
+  display: inline;
+  color: #4d4f52;
+}
+
+.profile-deets > div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.linked {
+  display: flex;
+}
+
+img[src="img/linkedin.svg"] {
+  width: 35px;
+  margin-right: 10px;
+}
+
+@media screen and (min-width:750px) {
+  .card-container{
+    display: flex;
+    border: 30px solid #d1d1d1;
+    margin: 48px;
+  }
+
+  .profile-deets{
+    width: 55%;
+  }
+
+}
