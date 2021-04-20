@@ -6,33 +6,126 @@
 
 // TODO: Refactor these styles to use Sass features
 
-.static-block {
-  border-top: 3px solid #6e27c5;
-}
-.static-block__title {
-  margin: 4rem 0 0;
-  font-size: 1.5rem;
-  font-family: arial, helvetica, sans-serif;
-  font-weight: 400;
-  color: #6e27c5;
+// .static-block {
+//   border-top: 3px solid #6e27c5;
+// }
+// .static-block__title {
+//   margin: 4rem 0 0;
+//   font-size: 1.5rem;
+//   font-family: arial, helvetica, sans-serif;
+//   font-weight: 400;
+//   color: #6e27c5;
+// }
+//
+// .static-block__copy {
+//   margin-bottom: 1rem;
+//   font-size: 1rem;
+//   font-family: arial, helvetica, sans-serif;
+//   color: #150f96;
+// }
+// .static-block__img {
+//   display: block;
+//   max-width: 100%;
+//   margin: auto;
+//   border-bottom: 5px solid #150f96;
+// }
+// .static-block__content {
+//   border-bottom: 5px solid #f6f5f6;
+//   margin: 2rem auto;
+// }
+// .static-block:last-of-type .static-block__content {
+//   border: none;
+// }
+
+
+// STYLINGS FOR THE CARD
+
+* {
+  box-sizing: border-box;
 }
 
-.static-block__copy {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  font-family: arial, helvetica, sans-serif;
-  color: #150f96;
+.main {
+  padding: 0;
 }
-.static-block__img {
+
+img {
+  width: 100%;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+.card-container {
+  border: 5px solid #d1d1d1;
+  margin: 16px;
+  padding: 16px;
+  text-align: center;
+}
+
+.profile-base {
+  margin-bottom: 15px;
+}
+
+.profile-base img {
   display: block;
-  max-width: 100%;
+  border-radius: 100%;
+  width: 75%;
+  max-width: 350px;
+  margin: 30px auto;
+}
+
+.profile-base h2 {
+  color: #4d4f52;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+.profile-base p {
+  color: #4d4f52;
+  margin-top: 15px;
+  font-size: 1.25em;
+  font-style: italic;
+}
+
+.profile-deets {
+  margin: 16px;
+  text-align: left;
+  background-color: red;
+}
+
+//Synthesis... the parent container sets the stage
+//Parent is set to center BUT the child does what it does if block or inline inline-block
+//For Flexbox you can achieve it easier but re-familiarize yourslef with it
+
+.profile-deets {
+  display: inline-block;
   margin: auto;
-  border-bottom: 5px solid #150f96;
 }
-.static-block__content {
-  border-bottom: 5px solid #f6f5f6;
-  margin: 2rem auto;
+
+.profile-deets h3, p {
+  display: inline;
 }
-.static-block:last-of-type .static-block__content {
-  border: none;
+
+.profile-deets > div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.linked {
+  display: flex;
+}
+
+img[src="img/linkedin.svg"] {
+  width: 35px;
+  margin-right: 10px;
+}
+
+
+@media screen and (min-width:750px) {
+  .card-container{
+    display: flex;
+    border: 30px solid #d1d1d1;
+  }
+
 }
