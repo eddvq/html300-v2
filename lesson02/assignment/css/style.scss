@@ -4,6 +4,14 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+// Color Variables
+
+$type-color = #4d4f52;
+$border-color = #d1d1d1;
+$container-color = #e8e8e8;
+
+//Global Styles
+
 * {
   box-sizing: border-box;
 }
@@ -20,8 +28,10 @@ h2 {
   font-size: 2em;
 }
 
+//Card Styles
+
 .card-container {
-  border: 5px solid #d1d1d1;
+  border: 5px solid $border-color;
   margin: 16px;
   padding: 16px;
   text-align: center;
@@ -29,46 +39,48 @@ h2 {
 
 .profile-base {
   margin-bottom: 15px;
-}
 
-.profile-base img {
-  display: block;
-  border-radius: 100%;
-  width: 75%;
-  max-width: 350px;
-  margin: 30px auto;
-}
+  img {
+    display: block;
+    border-radius: 100%;
+    width: 75%;
+    max-width: 350px;
+    margin: 30px auto;
+  }
 
-.profile-base h2 {
-  color: #4d4f52;
-  font-size: 2em;
-  margin-bottom: 0;
-}
+  h2 {
+    color: $type-color;
+    font-size: 2em;
+    margin-bottom: 0;
+  }
 
-.profile-base p {
-  color: #4d4f52;
-  margin-top: 15px;
-  font-size: 1.25em;
-  font-style: italic;
+  p {
+    color: $type-color;
+    margin-top: 15px;
+    font-size: 1.25em;
+    font-style: italic;
+  }
+
 }
 
 .profile-deets {
   margin: 16px;
   text-align: left;
-  background-color: #e8e8e8;
+  background-color: $container-color;
   display: inline-block;
   margin: auto;
   padding: 30px;
-}
 
-.profile-deets h3, p {
-  display: inline;
-  color: #4d4f52;
-}
+  h3, p {
+    display: inline;
+    color: $type-color;
+  }
 
-.profile-deets > div {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
 }
 
 .linked {
@@ -80,10 +92,15 @@ img[src="img/linkedin.svg"] {
   margin-right: 10px;
 }
 
+//Media Query
+
 @media screen and (min-width:750px) {
+
+  //Card Styles
+
   .card-container{
     display: flex;
-    border: 30px solid #d1d1d1;
+    border: 30px solid $border-color;
     margin: 48px;
   }
 
