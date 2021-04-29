@@ -56,20 +56,49 @@ const profileJSON = [
   }
 ];
 
+
+// // Convert JSON to object
+// const profileString = JSON.stringify(profileJSON);
+// const profileInfoBank = JSON.parse(profileString);
+//
+// let output ='';
+//
+// // Creates Individual Cards
+// profileInfoBank.forEach(function(currentUser){
+//     //Sets the base card
+//     //Creates Profile Base Div
+//     let profileBase = `<div class ="profile-base"><img src="img/headshot.jpg" alt="Dashing portrait of ${currentUser.name}"><h2>${currentUser.name}</h2><p>${currentUser.jobTitle}</p></div>`;
+//
+//     //Creates Profile Deets Div
+//     let profileDeets = `<div class="profile-deets">`;
+//
+//     let jobDeets = `<div class ="company"><h3>Company: </h3><p>${currentUser.company}</p></div>`;
+//     let expDeets = `<div class ="experience"><h3>Experience: </h3><p>${currentUser.experience}</p></div>`;
+//     let schoolDeets = `<div class ="school"><h3>School: </h3><p>${currentUser.school}</p></div>`;
+//     let majorDeets = `<div class ="experience"><h3>Major: </h3><p>${currentUser.major}</p></div>`;
+//     let emailDeets = `<div class ="email"><h3>Email: </h3><p>${currentUser.email}</p></div>`
+//     let linkedDeets = `<div class="linked"><img src="img/linkedin.svg" alt="LinkedInLogo"><p>${currentUser.linkedInUrl}</p></div>`
+//
+//     output = '<div class ="card-container">' + profileBase + profileDeets + jobDeets + expDeets + schoolDeets + majorDeets + emailDeets + linkedDeets +'</div>' + '</div>';
+//
+//
+// })
+//
+// //Outputs to Page
+// document.querySelector('.template-hook').innerHTML = output;
+
+
+
 // Convert JSON to object
 const profileString = JSON.stringify(profileJSON);
 const profileInfoBank = JSON.parse(profileString);
 
+let output = "";
+
 // Creates Individual Cards
 profileInfoBank.forEach(function(currentUser){
-
-  for(const key in currentUser){
-
-    //Sets the base card
-    let output ='<div class ="card-container">'
-
     //Creates Profile Base Div
-    let profileBase = `<div class ="profile-base"><img src="img/headshot.jpg" alt="Dashing portrait of Paolo Maldini"><h2>${currentUser.name}</h2><p>${currentUser.jobTitle}</p></div>`;
+    let profileBase = `<div class ="card-container"><div class ="profile-base"><img src="img/headshot.jpg" alt="Dashing portrait of ${currentUser.name}"><h2>${currentUser.name}</h2><p>${currentUser.jobTitle}</p></div>`;
 
     //Creates Profile Deets Div
     let profileDeets = `<div class="profile-deets">`;
@@ -83,10 +112,71 @@ profileInfoBank.forEach(function(currentUser){
 
     output = output + profileBase + profileDeets + jobDeets + expDeets + schoolDeets + majorDeets + emailDeets + linkedDeets +'</div>' + '</div>';
 
-    //Outputs to Page
     document.querySelector('.template-hook').innerHTML = output;
-  }
 })
+
+
+
+// // Convert JSON to object
+// const profileString = JSON.stringify(profileJSON);
+// const profileInfoBank = JSON.parse(profileString);
+//
+// let output ='<div class ="card-container">'
+//
+// // Creates Individual Cards
+// profileInfoBank.forEach(function(currentUser){
+//     //Sets the base card
+//
+//     //Creates Profile Base Div
+//     let profileBase = `<div class ="profile-base"><img src="img/headshot.jpg" alt="Dashing portrait of ${currentUser.name}"><h2>${currentUser.name}</h2><p>${currentUser.jobTitle}</p></div>`;
+//
+//     //Creates Profile Deets Div
+//     let profileDeets = `<div class="profile-deets">`;
+//
+//     let jobDeets = `<div class ="company"><h3>Company: </h3><p>${currentUser.company}</p></div>`;
+//     let expDeets = `<div class ="experience"><h3>Experience: </h3><p>${currentUser.experience}</p></div>`;
+//     let schoolDeets = `<div class ="school"><h3>School: </h3><p>${currentUser.school}</p></div>`;
+//     let majorDeets = `<div class ="experience"><h3>Major: </h3><p>${currentUser.major}</p></div>`;
+//     let emailDeets = `<div class ="email"><h3>Email: </h3><p>${currentUser.email}</p></div>`
+//     let linkedDeets = `<div class="linked"><img src="img/linkedin.svg" alt="LinkedInLogo"><p>${currentUser.linkedInUrl}</p></div>`
+//
+//     output = output + profileBase + profileDeets + jobDeets + expDeets + schoolDeets + majorDeets + emailDeets + linkedDeets +'</div>' + '</div>';
+//
+//     //Outputs to Page
+//     document.querySelector('.template-hook').innerHTML = output;
+//
+// })
+
+
+
+// // Creates Individual Cards
+// profileInfoBank.forEach(function(currentUser){
+//
+//   for(const key in currentUser){
+//
+//     //Sets the base card
+//     let output ='<div class ="card-container">'
+//
+//     //Creates Profile Base Div
+//     let profileBase = `<div class ="profile-base"><img src="img/headshot.jpg" alt="Dashing portrait of Paolo Maldini"><h2>${currentUser.name}</h2><p>${currentUser.jobTitle}</p></div>`;
+//
+//     //Creates Profile Deets Div
+//     let profileDeets = `<div class="profile-deets">`;
+//
+//     let jobDeets = `<div class ="company"><h3>Company: </h3><p>${currentUser.company}</p></div>`;
+//     let expDeets = `<div class ="experience"><h3>Experience: </h3><p>${currentUser.experience}</p></div>`;
+//     let schoolDeets = `<div class ="school"><h3>School: </h3><p>${currentUser.school}</p></div>`;
+//     let majorDeets = `<div class ="experience"><h3>Major: </h3><p>${currentUser.major}</p></div>`;
+//     let emailDeets = `<div class ="email"><h3>Email: </h3><p>${currentUser.email}</p></div>`
+//     let linkedDeets = `<div class="linked"><img src="img/linkedin.svg" alt="LinkedInLogo"><p>${currentUser.linkedInUrl}</p></div>`
+//
+//     output = output + profileBase + profileDeets + jobDeets + expDeets + schoolDeets + majorDeets + emailDeets + linkedDeets +'</div>' + '</div>';
+//
+//     //Outputs to Page
+//     document.querySelector('.template-hook').innerHTML = output;
+//
+//   }
+// })
 
 
 
