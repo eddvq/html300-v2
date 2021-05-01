@@ -1,0 +1,76 @@
+// Import partials here
+@import 'base.normalize';
+@import 'settings.variables';
+@import 'settings.responsive';
+@import 'components.content';
+
+$arbory: #006C67;
+$lily: #E6F0F0;
+$petal: #F2F7F7;
+
+body {
+  background-color: $petal;
+}
+
+.main {
+  margin: 0;
+  padding: 0;
+}
+
+
+.Nav {
+  background-color: $arbory;
+  height: 5rem;
+  padding: .50rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__menu {
+    color: $lily;
+    font-size: 2.25rem;
+  }
+
+  &__title {
+    font-family: 'Aleo', serif;
+    font-size: 2.25rem;
+    font-weight: 400;
+    color: $lily;
+  }
+
+  &__search-icon {
+    color: $lily;
+    font-size: 2.25rem;
+  }
+
+}
+
+.Results {
+  &__blurb {
+    margin: 1.25rem;
+
+    &__h3 {
+      font-family: 'Aleo', serif;
+      margin-bottom: 0;
+      margin-top: 1.5rem;
+    }
+
+    &__hr {
+      padding: 0;
+      border: 2px solid #006C67;
+      border-radius: 5px;
+      margin-top: .25rem;
+    }
+  }
+
+  &__body {
+    margin: .75rem;
+    width: 50%;
+    display: grid;
+  }
+}
+
+
+img {
+  width: 20%;
+}
