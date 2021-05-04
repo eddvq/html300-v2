@@ -8,6 +8,7 @@ $arbory: #006C67;
 $lily: #E6F0F0;
 $petal: #F2F7F7;
 $pebble: #E9E9E9;
+$boulder: #3D3D3D;
 
 body {
   display: grid;
@@ -91,7 +92,6 @@ body {
             margin-bottom: .75rem;
           }
 
-
           // //OPTION 2 WORKS
           &__search-image {
             width: 100%;
@@ -101,4 +101,39 @@ body {
           }
       }
   }
+}
+
+
+//Footer
+.Footer {
+  display: flex;
+  justify-content: center;
+  height: 10rem;
+  width: 100%:
+  background-color: $boulder;
+
+
+  &__ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 .75rem;
+    margin: 0;
+
+      &__li {
+        font-family: 'Aleo', serif;
+        list-style: none;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+
+          &__a{
+            color: $petal;
+            text-decoration: none;
+            font-size: 1.25rem;
+          }
+      }
+  }
+
+
 }
