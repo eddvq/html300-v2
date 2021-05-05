@@ -5,6 +5,7 @@
 @import 'components.content';
 
 $arbory: #006C67;
+$grove: #00403d;
 $lily: #E6F0F0;
 $petal: #F2F7F7;
 $pebble: #E9E9E9;
@@ -32,6 +33,7 @@ body {
   &__menu {
     color: $lily;
     font-size: 2.25rem;
+    cursor: pointer;
   }
 
   &__title {
@@ -44,8 +46,50 @@ body {
   &__search-icon {
     color: $lily;
     font-size: 2.25rem;
+    cursor: pointer;
   }
 
+  // Sliding Menu Styling
+  &__sliding-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 2.5rem;
+    background-color: $grove;
+    height: 100vh;
+    width: 100%;
+
+
+      &__ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+
+          &__close-icon {
+            color: $lily;
+            font-size: 2.50rem;
+            align-self: flex-end;
+            cursor: pointer;
+          }
+
+          &__li {
+            font-family: 'Aleo', serif;
+            list-style: none;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+
+              &__a{
+                color: $petal;
+                text-decoration: none;
+                font-size: 1.75rem;
+              }
+          }
+      }
+  }
 }
 
 //Results Body
@@ -109,9 +153,8 @@ body {
   display: flex;
   justify-content: center;
   height: 10rem;
-  width: 100%:
+  width: 100%;
   background-color: $boulder;
-
 
   &__ul {
     display: flex;
