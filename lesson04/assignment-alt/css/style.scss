@@ -4,6 +4,12 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+@mixin li-style {
+  list-style: none;
+  font-family: 'Aleo', serif;
+}
+
+
 $arbory: #006C67;
 $grove: #00403d;
 $lily: #E6F0F0;
@@ -81,8 +87,7 @@ body {
           }
 
           &__li {
-            font-family: 'Aleo', serif;
-            list-style: none;
+            @include li-style;
             padding-top: 1rem;
             padding-bottom: 1rem;
 
@@ -174,8 +179,7 @@ body {
     margin: 0;
 
       &__li {
-        font-family: 'Aleo', serif;
-        list-style: none;
+        @include li-style;
         padding-top: .5rem;
         padding-bottom: .5rem;
 
