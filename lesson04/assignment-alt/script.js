@@ -5,10 +5,13 @@ const navMenuCloseIcon = document.querySelector('.Nav__sliding-menu__ul__close-i
 
 // Toggles the sliding navigation bar on mobile
 navMenuIcon.addEventListener('click', function(){
-  document.querySelector('.Nav__sliding-menu').style.display = "block";
+  // document.querySelector('.Nav__sliding-menu').style.display = "block";
+  document.querySelector('.Nav__sliding-menu').style.width = "100%";
+
 });
 
 navMenuCloseIcon.addEventListener('click', function(){
-  document.querySelector('.Nav__sliding-menu').style.display = "none";
+  // document.querySelector('.Nav__sliding-menu').style.display = "none";
+  document.querySelector('.Nav__sliding-menu').style.width = "0";
 
 })
