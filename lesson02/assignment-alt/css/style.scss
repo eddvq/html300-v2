@@ -6,9 +6,9 @@
 
 // Color Variables
 
-$type-color = #4d4f52;
-$border-color = #d1d1d1;
-$container-color = #e8e8e8;
+$type-color : #4d4f52;
+$border-color : #d1d1d1;
+$container-color : #e8e8e8;
 
 //Global Styles
 
@@ -42,7 +42,7 @@ h2 {
 
   img {
     display: block;
-    border-radius: 100%;
+    border-radius: 30%;
     width: 75%;
     max-width: 350px;
     margin: 30px auto;
