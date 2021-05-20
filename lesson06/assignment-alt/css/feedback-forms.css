@@ -1,0 +1,48 @@
+/* Nav Bar */
+
+.span-bar {
+  background-color: #006C67;
+}
+
+.logoform{
+  font-family: 'Aleo', serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: #E6F0F0;
+  text-decoration: none;
+}
+
+.nav-bar {
+  background-color: #00403d;
+}
+
+.nav-item a {
+  font-family: 'Aleo', serif;
+  color: #E6F0F0;
+  text-decoration: none;
+  font-size: 1.25rem;
+  list-style-type: none;
+}
+
+/* Form Input Styling */
+
+
+
+/* Footer */
+
+.footer {
+  background-color: #3D3D3D;
+}
+
+
+.footer-li {
+  list-style-type: none;
+}
+
+.footer-li-a {
+  font-family: 'Aleo', serif;
+  color:  #E6F0F0;
+  text-decoration: none;
+  font-size: 1.25rem;
+  list-style-type: none;
+}
