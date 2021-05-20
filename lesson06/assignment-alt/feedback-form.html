@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/feedback-forms.css">
+  <script src="https://kit.fontawesome.com/2e8d1a037a.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+</head>
+<body>
+  <main class="Main">
+      <nav class="container-fluid span-bar p-0">
+        <div class="text-center logoform-container p-3">
+          <span class="col"><a class="logoform" href="index.html">Plant Project</a></span>
+        </div>
+
+
+        <!-- Tablet and Desktop Menu -->
+        <div class="container-fluid nav-bar gx-5">
+          <ul class="nav justify-content-between ">
+            <li class="nav-item"><a class="nav-link active p-3" aria-current="page" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link p-3" href="">Sources Cited</a></li>
+            <li class="nav-item"><a class="nav-link p-3" href="">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <div class="container p-5">
+
+      <h2>Share your thoughts!</h2>
+      <p>The Plant Project is my project for UW's front-end certification course. I'm always learning how to improve my code and am open for feedback. If you have any
+      or reccomendations please let me know down below:</p>
+
+      <form class=""  method="get" id="feedback-form">
+      <div id="error-log" class="alert alert-primary d-none">Don't be a stranger! Let me know your name so I know who to thank!</div>
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name">
+      </div>
+
+      <div id="error-log-two" class="alert alert-primary d-none">The email doesn't look quite right. Try again! </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address (if you want me to follow up)</label>
+        <input type="text" class="form-control" id="email" name="email">
+      </div>
+
+      <div class="mb-3">
+
+      <span>What plants did you come across?</span>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="trees" id="trees">
+        <label class="form-check-label" for="trees">
+          Trees
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="flowers" id="flowers">
+        <label class="form-check-label" for="flowers">
+          Flowers
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="shrubs" id="shrubs">
+        <label class="form-check-label" for="shrubs">
+          Shrubs
+        </label>
+      </div>
+    </div>
+
+
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Anything else you'd like to share? Totally optional.</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit form</button>
+      </div>
+    </form>
+
+    </div>
+
+    <div class="container p-5 pt-0">
+      <h3>FAQs</h3>
+      <p>For the curious!</p>
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Why did you choose this project?
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">As a transplant to the Pacific Northwest, I had a hard time identifying the local plantlife around me. I figured I wasn't the only one and figured I should build something that could (if I can get it to work) help others.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        What has been the hardest part of working on this project?
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">I'm newish to this coding stuff and reading into new documentation can be a bit intimidating. I figured if I combined something that I love it would make this project less daunting. So far I've learned alot! It's difficult but one step at a time!</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        What have you learned about Bootstrap for this assignment?
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">It is a huge timesaver. Building this form with custom code would have taken me an eternity. I'm really happy with the outcome, though I had to override some of the styles for the Nav and Footer. I'm thinking of keeping these bootstrap stylings if possible. (just the form and FAQs)</div>
+    </div>
+  </div>
+</div>
+    </div>
+
+
+      <footer class="container-fluid footer">
+        <ul class="d-flex text-center flex-column footer-ul p-0">
+          <li class="p-2 footer-li"><a class="footer-li-a p-3" href="#">Sources Cited</a></li>
+          <li class="p-2 footer-li"><a class="footer-li-a p-3" href="#">About Plant Project</a></li>
+          <li class="p-2 footer-li"><a class="footer-li-a p-3" href="#">Contact Us</a></li>
+        </ul>
+      </footer>
+  </main>
+  <!-- <script src="script.js"></script> -->
+  <script src="scripts/form-script.js"></script>
+</body>
+</html>
