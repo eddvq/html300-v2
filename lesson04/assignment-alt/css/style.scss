@@ -1,0 +1,195 @@
+// Import partials here
+@import 'base.normalize';
+@import 'settings.variables';
+@import 'settings.responsive';
+@import 'components.content';
+
+@mixin li-style {
+  list-style: none;
+  font-family: 'Aleo', serif;
+}
+
+
+$arbory: #006C67;
+$grove: #00403d;
+$lily: #E6F0F0;
+$petal: #F2F7F7;
+$pebble: #E9E9E9;
+$boulder: #3D3D3D;
+
+body {
+  display: grid;
+  background-color: $petal;
+}
+
+.Main {
+  margin: 0;
+  padding: 0;
+}
+
+// Navigation
+.Nav {
+  background-color: $arbory;
+  height: 5rem;
+  padding: .75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__menu {
+    color: $lily;
+    font-size: 2.25rem;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-family: 'Aleo', serif;
+    font-size: 2.25rem;
+    font-weight: 400;
+    color: $lily;
+  }
+
+  &__search-icon {
+    color: $lily;
+    font-size: 2.25rem;
+    cursor: pointer;
+  }
+
+
+// Menu inspiration pulled from https://www.w3schools.com/howto/howto_js_sidenav.asp
+
+  &__sliding-menu {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    overflow-x: hidden;
+    transition: 0.45s;
+    transition-timing-function: ease-out;
+    background-color: $grove;
+
+      &__ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 2.5rem;
+        margin: 0;
+        white-space: nowrap;
+
+          &__close-icon {
+            color: $lily;
+            font-size: 2.50rem;
+            align-self: flex-end;
+            cursor: pointer;
+          }
+
+          &__li {
+            @include li-style;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+
+              &__a{
+                color: $petal;
+                text-decoration: none;
+                font-size: 1.75rem;
+              }
+
+              &__a:hover {
+                color: $petal;
+                text-decoration: underline;
+              }
+          }
+      }
+  }
+}
+
+//Results Body
+.Results {
+  &__blurb {
+    margin: 1.5rem .75rem 1.5rem .75rem;
+
+    &__h3 {
+      font-family: 'Aleo', serif;
+      text-align: center;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    &__hr {
+      padding: 0;
+      border: 2px solid #006C67;
+      border-radius: 5px;
+      margin-top: .25rem;
+    }
+  }
+
+  //Results Body
+  &__body {
+    margin: .75rem;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: .5rem;
+
+      //Results Card
+      &__card {
+        background-color: $pebble;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+          //Card H3
+          &__h3 {
+            font-family: 'Aleo', serif;
+            text-align: center;
+            margin-top: .75rem;
+            margin-bottom: .75rem;
+          }
+
+          // //OPTION 2 WORKS
+          &__search-image {
+            width: 100%;
+            height: 12.5rem;
+            object-fit: cover;
+            object-position: bottom;
+          }
+      }
+  }
+}
+
+
+//Footer
+.Footer {
+  display: flex;
+  justify-content: center;
+  height: 10rem;
+  width: 100%;
+  background-color: $boulder;
+
+  &__ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 .75rem;
+    margin: 0;
+
+      &__li {
+        @include li-style;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+
+          &__a{
+            color: $petal;
+            text-decoration: none;
+            font-size: 1.25rem;
+          }
+      }
+  }
+
+
+}
