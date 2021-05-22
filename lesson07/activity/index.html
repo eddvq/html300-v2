@@ -6,8 +6,40 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Activity 07 - Vue</title>
         <link rel="stylesheet" href="/css/style.css">
+        <script src="https://unpkg.com/vue@next"></script>
     </head>
     <body>
+      <div id="app">
+        Counter: {{ counter }}
+        <p v-bind:title="name"> Hello, {{ name }}</p>
 
+        <img v-if="!imageShowing"  v-bind:src="imageSrc" alt="">
+        <button v-else>The Image isn't rendering</button>
+
+      </div>
+      <script type="text/javascript">
+        const CounterApp = {
+          data() {
+            return {
+              counter: 0,
+              name: "eddy",
+              imageShowing: false,
+              imageSrc:"https://picsum.photos/seed/picsum/200/300",
+
+
+              methods: {
+                plusOne(){
+                  this.counter += 1
+                },
+                makeGreeting(){
+                  return "hello there! "
+                },
+              }
+
+            }
+          }
+        }
+        Vue.createApp(CounterApp).mount('#app')
+      </script>
     </body>
 </html>
