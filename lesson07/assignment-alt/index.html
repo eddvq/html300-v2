@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/2e8d1a037a.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/vue@next"></script>
+  <title>Document</title>
+</head>
+<body>
+  <main class="Main">
+      <nav class="Nav" id="hamburgerMenu">
+        <i class="Nav__menu fas fa-bars" v-on:click="toggleOn"></i>
+        <span class="Nav__title"><a class="Nav__title__a" href="index.html">Plant Project</a></span>
+        <i class="Nav__search-icon fas fa-search"></i>
+
+        <!-- Hamburger Menue-->
+        <div class="Nav__sliding-menu"  v-bind:style="toggle">
+          <ul class="Nav__sliding-menu__ul">
+            <i class="Nav__sliding-menu__ul__close-icon fas fa-times" id="nav_menu_close_icon" v-on:click="toggleOff"></i>
+            <li class="Nav__sliding-menu__ul__li"><a class="Nav__sliding-menu__ul__li__a" href="about.html">About Plant Project</a></li>
+            <li class="Nav__sliding-menu__ul__li"><a class="Nav__sliding-menu__ul__li__a" href="#">Sources Cited</a></li>
+            <li class="Nav__sliding-menu__ul__li"><a class="Nav__sliding-menu__ul__li__a" href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Tablet and Desktop Menu -->
+        <div class="Nav__desktop-menu">
+          <ul class="Nav__desktop-menu__ul">
+            <li class="Nav__desktop-menu__ul__li"><a class="Nav__desktop-menu__ul__li__a" href="about.html">About</a></li>
+            <li class="Nav__desktop-menu__ul__li"><a class="Nav__desktop-menu__ul__li__a" href="">Sources Cited</a></li>
+            <li class="Nav__desktop-menu__ul__li"><a class="Nav__desktop-menu__ul__li__a" href="">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="Results">
+        <div class="Results__blurb">
+          <h3 class="Results__blurb__h3">Here's what we found near you:</h3>
+          <hr class="Results__blurb__hr">
+        </div>
+
+        <div class="Results__body" id="card-body">
+            <div v-bind:class="bodyClass" v-for="plant in plantBank">
+              <h3 v-if="plant.name.length > 16" v-bind:class="threeClass"> {{ truncater(plant.name) }} </h3>
+              <h3 v-else v-bind:class="threeClass"> {{ plant.name }} </h3>
+              <img v-if="plant.image.length > 2" v-bind:class="imageClass" v-bind:src="plant.image" v-bind:alt="plant.alt">
+              <img v-else v-bind:class="imageClass" v-bind:src="imageBackup" v-bind:alt="plant.alt">
+            </div>
+      </div>
+
+
+      <footer class="Footer">
+        <ul class="Footer__ul">
+          <li class="Footer__ul__li"><a class="Footer__ul__li__a" href="#">About Plant Project</a></li>
+          <li class="Footer__ul__li"><a class="Footer__ul__li__a" href="#">Sources Cited</a></li>
+          <li class="Footer__ul__li"><a class="Footer__ul__li__a" href="#">Contact Us</a></li>
+        </ul>
+      </footer>
+
+  </main>
+  <script src="script.js"></script>
+
+  <script type="text/javascript">
+    const cardMaker = {
+      data() {
+        return {
+          bodyClass: "Results__body__card",
+          threeClass: "Results__body__card__h3",
+          imageClass: "Results__body__card__search-image",
+          imageBackup: "https://images.unsplash.com/photo-1557318041-1ce374d55ebf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+          plantBank: [
+            {
+              image: "https://images.unsplash.com/photo-1601326106034-cd0d601458a1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
+              alt: "Image of a blooming flower on a sunny day",
+              name: "Generic Flower",
+            },
+            {
+              image: "https://images.unsplash.com/photo-1594081428850-42e70a1fe471?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+              alt: "Field of daisies",
+              name: "Daisies",
+            },
+            {
+              image: "https://images.unsplash.com/photo-1511255656699-6df8cf250a38?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+              alt: "Cherry blossoms in bloom",
+              name: "Cherry Blossoms",
+            },
+            {
+              image: "https://images.unsplash.com/photo-1601326106034-cd0d601458a1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
+              alt: "Image of a blooming flower on a sunny day",
+              name: "Generic Flower",
+            },
+            {
+              image: "https://images.unsplash.com/photo-1594081428850-42e70a1fe471?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+              alt: "Field of daisies",
+              name: "Daisies",
+            },
+            {
+              image: "",
+              alt: "Cherry blossoms in bloom",
+              name: "Flower with a really long name",
+            }
+          ]
+        }
+      },
+      methods: {
+        truncater(name) {
+          //Need to figure out how to make this responsive for larger viewports
+          const newName = name.slice(0, 17) + "...";
+          console.log(newName);
+          return newName;
+        }
+      }
+    }
+
+    const menuToggle = {
+        data() {
+          return {
+            toggle: "width:0",
+            status: false,
+          }
+        },
+          methods: {
+            toggleOn(){
+              this.toggle = "width:100%"
+            },
+            toggleOff(){
+              this.toggle = "width:0"
+
+            }
+          }
+        }
+
+    Vue.createApp(cardMaker).mount('#card-body');
+    Vue.createApp(menuToggle).mount('#hamburgerMenu');
+  </script>
+</body>
+</html>
